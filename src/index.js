@@ -10,5 +10,5 @@ import './scss/index.scss';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Hello Bulma!');
+  console.log('Hello From Noor!');
 });
