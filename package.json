@@ -1,7 +1,7 @@
 {
-  "name": "bulmacv",
+  "name": "NoorCV",
   "version": "1.0.0",
-  "description": "My webpack project",
+  "description": "My Online Resume",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,7 @@
     "build": "rm -rf dist && webpack --mode development --config webpack.server.config.js && webpack --mode development",
     "dev": "npm run build && webpack-dev-server --inline"
   },
-  "author": "",
+  "author": "Noor Totah",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.0.0",

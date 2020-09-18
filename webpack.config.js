@@ -75,13 +75,13 @@ module.exports = {
 		new CopyPlugin({
 	      patterns: [
 	        { from: './src/images', to: './images' },
+	        { from: './src/docs', to: './docs' }
 	      ]
 	    })
 	],
 
 	module: {
 		rules: [
-
 			{
 			 	test: /\.(woff|woff2|eot|ttf|otf)$/,
 			  	loader: 'file-loader',

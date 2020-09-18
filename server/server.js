@@ -20,9 +20,9 @@ server.use(cors());
 server.use(logger('dev'));
 
 // send the user to index html page inspite of the url
-server.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'index.html'));
-});
+// server.get('*', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, 'index.html'));
+// });
 
 
 httpss.createServer(server);
