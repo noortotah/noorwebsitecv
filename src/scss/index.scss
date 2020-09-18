@@ -1,0 +1,395 @@
+@charset "utf-8";
+
+@import '_variables.scss';
+
+.is-primary {
+    background-color: $primary;   
+}
+.is-white{
+    background-color: white;
+}
+.has-white-text{
+    color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $family-sans-serif;
+    font-weight: 800;
+}
+
+.hero.is-white .title{
+    color: #363644;
+}
+
+/* NAV */
+.navbar {
+    padding: 1.2rem 0;
+    box-shadow: none;
+    z-index: auto;
+    font-size: 18px;
+    font-weight: 400px
+}
+.navbar .navbar-brand a.navbar-item img {
+    max-height: 3rem;
+}
+.navbar .title {
+    font-weight: 800;
+}
+
+
+.subtitle {
+    font-family: $family-sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+
+
+.download-cv{
+    button {
+        border: none;
+        &:hover{
+            background-color: $light-grey;
+        }
+    }
+}
+
+.about-me {
+    .subtitle{
+        color: white;
+    }
+}
+
+.avatar {
+    margin: 2rem 0;
+    width: 150px;
+}
+
+.section.is-long {
+    padding-bottom: 14rem;
+}
+
+
+.section.skills {
+    margin-top: -14rem;
+    padding-bottom: 1rem;
+}
+
+
+
+.section.skills .box .content .columns .column:last-child {
+    border-right: none;
+    border-bottom: none;
+}
+
+
+
+.section.skills .box .content .columns .column figure.image img.is-skill-icon {
+    height: 48px;
+    width: auto;
+}
+
+.section.skills .box .content .columns .column ul {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+
+.projects .project-grid {
+    padding-top: 4rem;
+}
+
+.projects .project-grid figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.projects .project-grid figure img.project-thumb {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+.projects .project-grid figure figcaption {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 0rem 3rem;
+    color: white;
+    z-index: 1;
+}
+
+
+.projects .project-grid figure figcaption h1.title {
+    color: white;
+    margin-bottom: 1.8rem;
+    font-weight: 500;
+}
+
+
+.projects .project-grid figure:hover .overlay, .projects .project-grid figure:hover figcaption {
+    opacity: 1;
+}
+
+.projects .project-grid .overlay {
+    background-color: lighten($dark, 12%);
+}
+
+.projects .project-grid .overlay, .projects .project-grid figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: .45s ease-in-out;
+    transition: .45s ease-in-out;
+}
+
+// WORK 
+
+
+
+.has-border-top {
+    border-top: 1px solid $light-grey;
+}
+
+
+.testimonials-slider {
+    position: relative;
+}
+input[name="carousel"] {
+    display: none;
+}
+
+
+.carousel-slides {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+.carousel-slides .carousel-inner {
+    width: 500%;
+    -webkit-transition: margin 0.5s;
+    transition: margin 0.5s;
+}
+
+.carousel-slides .carousel-item {
+    float: left;
+    width: 20%;
+}
+
+
+.section.testimonials .testimonial-block img.avatar {
+    margin: 4rem auto 2rem;
+}
+
+.section.testimonials .testimonial-block img.avatar {
+    margin: 2.5rem auto 2rem;
+    max-width: 96px;
+    height: auto;
+    border-radius: 100px;
+}
+
+
+.section.testimonials .testimonial-block p.quote {
+    font-size: 20px;
+    font-family: $family-sans-serif;
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+}
+
+
+.carousel-nav {
+    margin: 0.25rem 0 3rem;
+    text-align: center;
+    z-index: 1;
+}
+
+.carousel-nav label {
+    display: inline-block;
+    margin: 0 6px;
+    width: 15px;
+    height: 15px;
+    border: 2px solid $light-grey;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: background-color 0.25s;
+    transition: background-color 0.25s;
+
+}
+
+[id^=carousel]:checked ~ .carousel-nav label[for^="carousel"] {
+    background-color: $primary;
+    border: 2px solid $primary;
+}
+
+[id^=carousel]:checked ~ .carousel-slides .carousel-inner {
+    margin-left: -100%;
+}
+
+.is-narrow {
+    max-width: 1200px;
+}
+
+.section.call-to-action .box {
+    padding: 3.5rem 2rem;
+    margin-top: -9rem;
+    background-color: darken($grey, 20%);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px darken($grey, 20%);
+}
+
+.section.call-to-action .title, .section.call-to-action p {
+    color: white;
+    margin-bottom: 0;
+}
+
+
+footer {
+    color: white;
+    .title {
+        font-weight: 300;
+        font-size: 1.6rem;
+        margin: 2rem auto;
+        max-width: 300px;
+        opacity: 0.7;
+        color: white;
+    }
+    .logo img{
+        height: 48px;
+    }
+}
+
+
+footer .social-icons {
+    margin: 0 auto 3.5rem;
+}
+
+
+// //contact
+
+.navbar.is-planner {
+    border-bottom: 1px solid $light-grey;
+}
+.animate-fadeDown {
+    -webkit-animation: fadeIn 2s, translate-down 0.75s;
+    animation: fadeIn 2s, translate-down 0.75s;
+}
+.animate-fadeUp {
+    -webkit-animation: fadeIn 2s, translate-up 1s;
+    animation: fadeIn 2s, translate-up 1s;
+}
+
+.is-form-page .container .avatar {
+    width: 84px;
+    margin: -50px auto 50px;
+    z-index: 10;
+}
+.is-form-page .container form {
+    max-width: 640px;
+    margin: 32px auto 0;
+}
+
+.is-form-page .container form button {
+    margin: 20px 0 80px;
+    border-width: 2px;
+    font-weight: 400;
+    height: auto;
+}
+.is-form-page .container h1.title {
+    font-weight: 400;
+}
+
+footer .social-icons a.button {
+    background-color: transparent;
+    color: white;
+    border-radius: 100%;
+    margin: 0 .2rem;
+    height: 47px;
+    width: 47px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (min-width: 769px){
+    .avatar {
+        width: 210px;
+    }  
+    .hero-foot img.is-bottom {
+        margin-bottom: -4.3rem;
+        max-width: 860px;
+    }
+    .section.is-long {
+        padding-bottom: 16rem; 
+    }
+    section.skills .box .content .columns .column {
+        border-bottom: 0px solid $light-grey;
+        border-right: 1px solid $light-grey;
+        padding: 60px 35px;
+    }
+    footer .title {
+        max-width: 320px;
+    }
+}
+
+@media screen and (min-width: 1216px){
+    .section.is-long {
+        padding-bottom: 18rem; 
+    }  
+}
+
+.is-planner {
+
+    a.button {
+        font-weight: 400;
+        color: $primary;
+        border-color: white;
+    }
+
+    h1.title {
+        font-weight: 400;
+    }
+}
+
+.is-form-page {
+    form {
+        transition: visibility 0.5s, opacity 0.5s linear;
+        label.label {
+            font-weight: 300;
+            font-family: "eurostile", sans-serif;
+            font-size: 1.2rem;
+            color: rgba(41, 51, 71, 0.65);
+            transition: opacity 0.9s ease-in, transofrm 0.9s  ease-in;
+        }
+
+        input, textarea {
+            border: 1px solid $light-grey;
+            color: $dark;
+            box-shadow: none;
+            font-weight: 300;
+        }
+    }
+    .notification {
+        transition: visibility 0.5s, opacity 0.5s linear;
+    }
+    .hidden {
+        visibility: visible;
+        // display: none;
+        opacity: 0;
+    }
+    .show {
+        visibility: visible;
+        display: block;
+        opacity: 1;
+    }
+
+} 
