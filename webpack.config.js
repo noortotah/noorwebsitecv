@@ -61,7 +61,7 @@ module.exports = {
 	plugins: [
 		
 		new webpack.ProgressPlugin(),
-		new MiniCssExtractPlugin({ filename: 'index.css' }),
+		new MiniCssExtractPlugin({ filename: 'css/index.css' }),
 		new HtmlWebpackPlugin({
 			filename: './index.html',
 			template: './src/index.html',
@@ -82,14 +82,6 @@ module.exports = {
 
 	module: {
 		rules: [
-			{
-			 	test: /\.(woff|woff2|eot|ttf|otf)$/,
-			  	loader: 'file-loader',
-			  	options: {
-			  		name: "fonts/[name].[ext]",
-			    	outputPath: '../dist'
-			    }
-			},
 			{
 		      test: /\.scss$/,
 		      use: [
@@ -112,8 +104,21 @@ module.exports = {
 		    },
 		    {
 		         
-			    test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
-			    loader: 'url-loader?limit=100000' 
+			    test: /\.(woff|woff2|eot|ttf)(\?[a-z0-9=.]+)?$/,
+			    loader: 'url-loader?limit=100000',
+			    options: {
+		            limit: 1000, // if less than 10 kb, add base64 encoded image to css
+		            name: "fonts/[name].[ext]" // if more than 10 kb move to this folder in build using file-loader
+		        }
+			},
+			{
+		         
+			    test: /\.(jpe?g|png|gif|svg)(\?[a-z0-9=.]+)?$/,
+			    loader: 'url-loader',
+			    options: {
+		            limit: 1000, // if less than 10 kb, add base64 encoded image to css
+		            name: "images/[hash].[ext]" // if more than 10 kb move to this folder in build using file-loader
+		        }
 			},
 			{
 				test: /.js$/,

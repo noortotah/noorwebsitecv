@@ -25,9 +25,9 @@ server.get('/contact', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'contact.html'));
 });
 
-server.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'index.html'));
-});
+// server.get('*', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, 'index.html'));
+// });
 
 
 httpss.createServer(server);

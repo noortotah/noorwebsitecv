@@ -34,12 +34,14 @@ $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
 
-@font-face {
-    font-family: "eurostile";
-    src: url("../fonts/EurostileBold.ttf") format('ttf');
-    src: url("../fonts/EurostileExtended.ttf") format('ttf'),
-    url("../fonts/EurostileOblique.ttf") format('ttf'),
-    url("../fonts/EuroStyle Normal.ttf") format('ttf');
-}
+// @font-face {
+//     font-family: "eurostile";
+//     src: url("../fonts/EuroStyle Normal.ttf")  format('truetype');
+//     src: url("../fonts/EurostileExtended.ttf") format('truetype'),
+//     url("../fonts/EurostileOblique.ttf") format('truetype'),
+//     url("../fonts/EurostileBold.ttf") format('truetype');
+// }
+
+
 
 @import "./../../node_modules/bulma/bulma";
