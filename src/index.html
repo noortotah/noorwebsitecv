@@ -10,18 +10,19 @@
   <body>
 
     <!-- NAV -->
+      
     <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
       <div class="container">
           <div class="navbar-brand">
             
-            <a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" data-target="#navMenu">
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
             </a>
           </div>
-          <div class="navbar-menu" id="navMenu">
-            <div class="navbar-start"></div>
+          <div id="navMenu" class="navbar-menu">
+
             <div class="navbar-end">
 
             <a class="navbar-item download-cv" href="./docs/cv.pdf" download="noor-totah-cv"> 
@@ -29,7 +30,8 @@
               </a>
               
               <div class="navbar-item">
-                <a class="button is-primary is-outlined is-rounded" href="/contact.html">Say Hello</a></div>
+                <a class="button is-primary is-outlined is-rounded" href="/contact.html">Say Hello</a>
+              </div>
             </div>
           </div>
       </div>
